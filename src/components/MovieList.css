@@ -1,0 +1,414 @@
+/* MovieList.css */
+
+body, html {
+    display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  }
+  
+  .MovieList {
+    display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  }
+  .container-20 > * {
+    flex-grow: 1;
+  }
+  
+  .container-20 {
+    width: 10%;    display: flex;
+    flex-direction: column;
+    border: 1px solid black; /* Add this line for a solid black border */
+}
+.above-left-container,
+.lower-left-container {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #181010;
+}
+  
+  .container-80 {
+    width: 80%;
+    flex-grow: 1; /* Allow container-80 to grow and take up remaining space */
+
+    height: 100%;
+    border: 1px solid black; /* Add this line for a solid black border */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Search-container{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #181010;
+    text-align: left; /* Align text to the left within the container */
+
+  }
+  /* Style for the input */
+input {
+    width: calc(25% - 16px); /* Adjust width to account for padding */
+  padding: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border: solid; /* Remove default input border */
+  border-radius: 20px; /* Adjust the border radius as needed */
+  }
+
+  .Trending-container{
+    flex: 1; /* Expand and take up remaining vertical space */
+    padding: 10px;
+    margin: 10px;  
+    border: 1px solid #181010;
+    height: 100%; /* Set a fixed height for the image containers */
+  display: flex;
+  flex-direction: column; /* Stack images and titles vertically */
+  }
+
+  .TopRated-container,
+.NowPlaying-container {
+    flex: 1; /* Expand and take up remaining vertical space */
+    margin: auto;
+    padding: 10px;
+    margin: 10px; 
+    border: 1px solid #181010;
+    height: 100%; /* Set a fixed height for the image containers */
+  display: flex;
+  flex-direction: column; /* Stack images and titles vertically */
+}
+
+.NowPlaying-container img,
+.TopRated-container img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the container */
+      margin-right: 10px; /* Add spacing between images */
+  
+}
+.SearchResults-container {
+  flex: 1;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #181010;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-item-search {
+  position: relative;
+  list-style: none;
+  height: 300px;
+  margin: 5%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.movie-item-search img {
+  height: 100%;
+  width: 100%;
+}
+
+.title-container-search {
+  position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    left: 0;
+    /* width: 1095%; */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.title-container-search p {
+  margin: 0;
+  color: #fff;
+}
+.search{
+  width:250px;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+ul {
+
+    list-style:circle;
+    border: 1px solid #181010;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #666;
+    border: 1px solid #181010;
+    
+}
+/* MovieList.css */
+.movie-item {
+    position: relative;
+    list-style: none;
+    height: 300px;
+    width: 45%;
+    margin: 1%;
+    margin-bottom: 20px;
+  }
+  
+  .Trending-container img {
+    width: 100%;
+  height: 100%; /* Ensure the image covers the container */
+    margin-right: 10px; /* Add spacing between images */
+  }
+  
+  .title-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+    padding: 10px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Adjust the blur effect */
+  }
+  
+  .title-container p {
+    margin: 0;
+    color: #fff;
+  }
+  
+  /* Optional: Add some responsive styles */
+  @media (max-width: 768px) {
+     h1 {
+      font-size: 20px;
+    }
+  
+     li {
+      font-size: 14px;
+    }
+    .Trending-container img
+   {
+    width: 100%; /* Full width on smaller screens */
+    margin-right: 0; /* Remove spacing between images */
+  }
+  }
+
+
+
+  /* mobile ---------------------------------------------------------------------------------------------------------------------*/
+
+.mobile-App {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+  
+.container-20-mobile > * {
+  flex-grow: 1;
+}
+
+.container-20-mobile {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border: 1px solid black; /* Add this line for a solid black border */
+  position: fixed; /* Set the position to fixed */
+  top: 0;
+  left: 0;
+  background-color: white;
+
+  height: 100%;
+  z-index: 2; /* Ensure it's above container-80 */
+
+}
+.container-20-mobile.menu-open {
+  width: 50%;
+  background-color: white;
+  z-index: 2; /* Ensure it's above container-80 */
+}
+
+.container-80-mobile {
+  width: 100%;
+  flex-grow: 1; /* Allow container-80 to grow and take up remaining space */
+  display: block; /* Initially set display to block */
+  z-index: 1; /* Ensure it's above other elements */
+  height: 100%;
+  border: 1px solid black; /* Add this line for a solid black border */
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  cursor: pointer;
+  position: fixed; /* Set the position to fixed */
+  top: 41px;
+  right: 40px;
+  z-index: 3; /* Ensure it's above other elements */
+}
+.container-20-mobile.menu-open + .container-80-mobile {
+  transition: margin-left 0.3s ease-in-out; /* Add transition for a smooth effect */
+}
+.above-left-container-mobile,
+.lower-left-container-mobile {
+padding: 10px;
+margin: 10px;
+border: 1px solid #181010;
+}
+
+
+
+.Search-container-mobile{
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #181010;
+  text-align: left; /* Align text to the left within the container */
+
+}
+/* Style for the input */
+input {
+  width: calc(25% - 16px); /* Adjust width to account for padding */
+padding: 8px;
+margin-top: 8px;
+box-sizing: border-box;
+border: solid; /* Remove default input border */
+border-radius: 20px; /* Adjust the border radius as needed */
+}
+
+.Trending-container-mobile{
+  flex: 1; /* Expand and take up remaining vertical space */
+  padding: 10px;
+  margin: 10px;  
+  border: 1px solid #181010;
+  height: 100%; /* Set a fixed height for the image containers */
+display: flex;
+flex-direction: column; /* Stack images and titles vertically */
+}
+
+.TopRated-container-mobile,
+.NowPlaying-container-mobile {
+  flex: 1; /* Expand and take up remaining vertical space */
+  margin: auto;
+  padding: 10px;
+  margin: 10px; 
+  border: 1px solid #181010;
+  height: 100%; /* Set a fixed height for the image containers */
+display: flex;
+flex-direction: column; /* Stack images and titles vertically */
+}
+
+.NowPlaying-container-mobile img,
+.TopRated-container-mobile img {
+  width: 100%;
+  height: 100%; /* Ensure the image covers the container */
+    margin-right: 10px; /* Add spacing between images */
+
+}
+.SearchResults-container-mobile {
+flex: 1;
+margin: auto;
+padding: 10px;
+border: 1px solid #181010;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.movie-item-search-mobile {
+position: relative;
+list-style: none;
+height: 300px;
+margin: 5%;
+margin-bottom: 20px;
+box-sizing: border-box;
+}
+
+.movie-item-search-mobile img {
+height: 100%;
+width: 100%;
+}
+
+.title-container-search-mobile {
+position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  left: 0;
+  /* width: 1095%; */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.title-container-search-mobile p {
+margin: 0;
+color: #fff;
+}
+.search-mobile{
+width:250px;
+}
+
+
+h1 {
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+ul {
+
+  list-style:circle;
+  border: 1px solid #181010;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #666;
+  border: 1px solid #181010;
+  
+}
+/* MovieList.css */
+.movie-item-mobile {
+  position: relative;
+  list-style: none;
+  height: 300px;
+  width: 45%;
+  margin: 1%;
+  margin-bottom: 20px;
+}
+
+.Trending-container-mobile img {
+  width: 100%;
+height: 100%; /* Ensure the image covers the container */
+  margin-right: 10px; /* Add spacing between images */
+}
+
+.title-container-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+  padding: 10px;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px); /* Adjust the blur effect */
+}
+
+.title-container-mobile p {
+  margin: 0;
+  color: #fff;
+}
