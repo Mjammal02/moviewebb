@@ -206,7 +206,7 @@ const MovieList = () => {
           )}
       </div>
     </div>
-    : //Else - sats för mobiler-------------------------------------------------------------------------------------------
+    : //Else - sats för mobiler--------------------------------------------------------------------------------------------
     <div className="mobile-App">
 <div className={`container-20-mobile ${showMenu ? 'menu-open' : ''}`}>
         {/* First container, 20% of the page width */}
